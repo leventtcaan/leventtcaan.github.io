@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Levent Can Ceylan · Software engineer</title>
-  <meta name="description" content="Software engineer graduating June 2027. I built Next Call, an iOS coaching app on the App Store: the rules make the decisions, the AI only explains them.">
+  <meta name="description" content="Software engineer graduating June 2027. Intern at Garanti BBVA Teknoloji. I build software from the app screen down to the server it runs on, and built Next Call, an iOS app on the App Store, on my own.">
   <meta property="og:title" content="Levent Can Ceylan · Software engineer">
-  <meta property="og:description" content="I built Next Call, an iOS coaching app on the App Store. The rules make the decisions; the AI only explains them.">
+  <meta property="og:description" content="From the app screen down to the server it runs on. Intern at Garanti BBVA Teknoloji, built Next Call (on the App Store) on my own, graduating June 2027.">
   <meta property="og:image" content="https://leventtcaan.github.io/assets/og-card.png">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0B0D12">
@@ -22,7 +22,7 @@
   <header class="nav">
     <a class="nav__name" href="#top">Levent Can Ceylan</a>
     <nav aria-label="Sections">
-      <a href="#how">How it decides</a>
+      <a href="#stack">By layer</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
@@ -30,34 +30,198 @@
   </header>
 
   <main id="main">
-    <!-- HERO: kanıt ilk ekranda -->
+    <!-- HERO: kim, ne, nerede, kanıt, ne arıyor -->
     <section class="hero" id="top">
       <div class="hero__text">
         <p class="eyebrow">Software engineer · graduating June 2027</p>
-        <h1 class="hero__name">Levent Can<br>Ceylan</h1>
-        <p class="hero__lede">
-          I built <strong>Next Call</strong>, an iOS coaching app that's now on the App Store.
-          The rules make the decisions; the AI only explains them.
+        <h1 class="hero__name">Levent Can Ceylan</h1>
+        <p class="hero__lede">I build software from the app screen down to the server it runs on.</p>
+        <p class="hero__sub">
+          Final-year Computer Engineering student at Akdeniz University and software engineering intern at <strong>Garanti BBVA Teknoloji</strong>.
+          I built <strong>Next Call</strong> on my own, an iOS app now on the App Store.
         </p>
+
+        <ul class="proof" aria-label="Proof">
+          <li>
+            <span class="proof__dot proof__dot--live" aria-hidden="true"></span>
+            <a href="https://apps.apple.com/app/id6819852276" target="_blank" rel="noopener"><b>Next Call</b> on the App Store <span aria-hidden="true">↗</span></a>
+            <span class="proof__note">iOS app and its backend, solo</span>
+          </li>
+          <li>
+            <span class="proof__dot" aria-hidden="true"></span>
+            <a href="#garanti"><b>Garanti BBVA Teknoloji</b></a>
+            <span class="proof__note">Software engineering intern, Jul–Nov 2026</span>
+          </li>
+          <li>
+            <span class="proof__dot" aria-hidden="true"></span>
+            <a href="#nutriscan"><b>NutriScan</b></a>
+            <span class="proof__note">Senior design project, team of 3, I own the architecture</span>
+          </li>
+        </ul>
+
+        <p class="hero__looking"><span>Looking for</span> a new-grad software engineering role from summer 2027. Based in Antalya, Türkiye.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="https://apps.apple.com/app/id6819852276" target="_blank" rel="noopener">See it on the App Store <span aria-hidden="true">↗</span></a>
-          <a class="btn btn--ghost" href="#how">How it decides <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--primary" href="mailto:ceylanleventcan@gmail.com">Email me</a>
+          <a class="btn btn--ghost" href="#stack">See it layer by layer <span aria-hidden="true">↓</span></a>
+          <a class="hero__link" href="https://github.com/leventtcaan" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="hero__link" href="https://www.linkedin.com/in/leventcanceylan" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
-        <p class="hero__meta">
-          Akdeniz University, Computer Engineering · Software engineering intern at Garanti BBVA Technology · Antalya, Türkiye
-        </p>
       </div>
-      <!-- WebGL yoksa ya da hareket azaltılmışsa görünen yedek telefon -->
-      <figure class="hero__phone-fallback" aria-hidden="true">
-        <div class="phone-frame"><img src="/img/nc-02-the-call.webp" alt="" width="360" height="784"></div>
+      <!-- WebGL yoksa, mobilde ya da hareket azaltılmışsa görünen yedek telefon -->
+      <figure class="hero__phone-fallback">
+        <div class="phone-frame"><img src="/img/nc-02-the-call.webp" alt="Next Call on iPhone: the weekly call screen with a new calorie target" width="360" height="784"></div>
       </figure>
     </section>
 
-    <!-- KARAR AKIŞI: sabitlenen kaydırma sahnesi -->
+    <!-- SİSTEM HARİTASI: katman başına kanıt -->
+    <section class="stack" id="stack" aria-labelledby="stack-title">
+      <div class="stack__sticky">
+        <div class="stack__head">
+          <p class="eyebrow">By layer</p>
+          <h2 id="stack-title">Every layer, and where I did it</h2>
+          <p class="stack__intro">Not a skills list. Each row is something I built or changed, and the project it happened in.</p>
+        </div>
+        <ol class="layers">
+          <li class="layer" data-layer="0">
+            <span class="layer__name">Mobile</span>
+            <p class="layer__what">Expo / React Native iOS client, generated from the API's OpenAPI contract. Passed App Store review in November 2026.</p>
+            <a class="layer__where" href="#nextcall">Next Call</a>
+          </li>
+          <li class="layer" data-layer="1">
+            <span class="layer__name">Web</span>
+            <p class="layer__what">Fixed a form-state bug in a React/TypeScript branch-operations web app and updated its unit test to cover the new behaviour.</p>
+            <a class="layer__where" href="#garanti">Garanti BBVA</a>
+          </li>
+          <li class="layer" data-layer="2">
+            <span class="layer__name">Backend &amp; API</span>
+            <p class="layer__what">Java and Spring Boot, split into modules with Spring Modulith. The API is written as an OpenAPI spec before the code.</p>
+            <a class="layer__where" href="#nextcall">Next Call</a>
+          </li>
+          <li class="layer" data-layer="3">
+            <span class="layer__name">AI integration</span>
+            <p class="layer__what">A rule engine makes the weekly coaching decision. The language model writes the explanation and can't change the number.</p>
+            <a class="layer__where" href="#how">Next Call</a>
+          </li>
+          <li class="layer" data-layer="4">
+            <span class="layer__name">Data</span>
+            <p class="layer__what">Python label pipeline: text cleanup, ingredient matching (E-codes, Turkish plural forms, fuzzy matching) and rule checks from a versioned rule table.</p>
+            <a class="layer__where" href="#nutriscan">NutriScan</a>
+          </li>
+          <li class="layer" data-layer="5">
+            <span class="layer__name">Infra &amp; deploy</span>
+            <p class="layer__what">Next Call runs in Docker on a VPS I set up and maintain. At the bank, changes go through CI pipelines.</p>
+            <span class="layer__where">Next Call · Garanti BBVA</span>
+          </li>
+          <li class="layer" data-layer="6">
+            <span class="layer__name">Tests &amp; review</span>
+            <p class="layer__what">260+ backend test classes and 80+ architecture decision records on Next Call. Unit tests and code review on a codebase with 4,000+ automated tests at the bank.</p>
+            <span class="layer__where">Next Call · Garanti BBVA</span>
+          </li>
+        </ol>
+        <div class="stack__labels" aria-hidden="true">
+          <span class="stack-label" data-slabel="0">Mobile</span>
+          <span class="stack-label" data-slabel="1">Web</span>
+          <span class="stack-label" data-slabel="2">API</span>
+          <span class="stack-label" data-slabel="3">AI</span>
+          <span class="stack-label" data-slabel="4">Data</span>
+          <span class="stack-label" data-slabel="5">Infra</span>
+          <span class="stack-label stack-label--tests" data-slabel="6">Tests around all of it</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- İŞLER: üç dengeli örnek -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <p class="eyebrow">Work</p>
+      <h2 id="work-title" class="section-title">Three places the layers come from</h2>
+
+      <article class="project project--flagship reveal" id="nextcall">
+        <header class="project__head">
+          <img class="project__icon" src="/img/nc-icon.webp" alt="" width="56" height="56">
+          <div>
+            <h3>Next Call</h3>
+            <p class="project__tag">Solo · iOS app and backend · 2026</p>
+          </div>
+          <span class="pill pill--live">On the App Store since Nov 2026</span>
+        </header>
+        <p class="project__lede">
+          A weekly coaching app for lifting and diet. It reads your training, food, weight and progress photos, and once a week it makes one call on what to change.
+        </p>
+        <div class="shots" role="list">
+          <figure role="listitem"><img src="/img/nc-01-this-week.webp" alt="Next Call: this week screen" loading="lazy" width="360" height="784"></figure>
+          <figure role="listitem"><img src="/img/nc-02-the-call.webp" alt="Next Call: the weekly call, new calorie target" loading="lazy" width="360" height="784"></figure>
+          <figure role="listitem"><img src="/img/nc-03-workout.webp" alt="Next Call: workout screen" loading="lazy" width="360" height="784"></figure>
+        </div>
+        <div class="project__cols">
+          <div>
+            <h4>How it's built</h4>
+            <p>Java and Spring Boot on the backend, split into modules with Spring Modulith. The React Native client is generated from an OpenAPI contract, so the app and the server work from the same definition. It runs in Docker on a VPS I set up and maintain.</p>
+          </div>
+          <div>
+            <h4>Decisions I'd defend</h4>
+            <ul class="decisions">
+              <li><b>Rules decide, the model explains.</b> A coaching number should be reproducible and testable. Wording is where a language model helps.</li>
+              <li><b>Modules, not services.</b> One person, one deploy. Clear seams if it ever has to be split.</li>
+              <li><b>Contract first.</b> The API is written as an OpenAPI spec before the code, and the mobile client is generated from it.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="project__honest"><span>What's missing:</span> real users. That's the next step, not a footnote.</p>
+        <a class="project__more" href="#how">How one weekly call gets made <span aria-hidden="true">↓</span></a>
+      </article>
+
+      <div class="project-pair">
+        <article class="project reveal" id="nutriscan">
+          <header class="project__head">
+            <div>
+              <h3>NutriScan</h3>
+              <p class="project__tag">Senior design project · team of 3 · 2026–2027</p>
+            </div>
+          </header>
+          <p class="project__lede project__lede--sm">
+            Reads a packaged food's label from a photo and checks it against sourced rules for the user's health conditions. When the rules or the data don't cover a case, it says so instead of guessing.
+          </p>
+          <ol class="pipe" aria-label="NutriScan label pipeline">
+            <li>label photo</li>
+            <li class="pipe__mine">text cleanup</li>
+            <li class="pipe__mine">ingredient matching</li>
+            <li class="pipe__mine">versioned rule table</li>
+            <li class="pipe__out">result with its reason and source, or <i>unverifiable</i></li>
+          </ol>
+          <p class="project__body">
+            My part is the architecture and the Python label pipeline (highlighted). Matching handles E-codes, Turkish plural forms and fuzzy matches. Submitted to TÜBİTAK 2209-A.
+          </p>
+        </article>
+
+        <article class="project reveal" id="garanti">
+          <header class="project__head">
+            <div>
+              <h3>Garanti BBVA Teknoloji</h3>
+              <p class="project__tag">Long-term software engineering intern · Branch Channel Management · Jul–Nov 2026</p>
+            </div>
+          </header>
+          <p class="project__lede project__lede--sm">
+            Joined through the Garanti BBVA Talent Camp and stayed on as a long-term intern, in an Agile team working on a large banking codebase.
+          </p>
+          <ol class="pipe" aria-label="How a change moves at the bank">
+            <li>ticket</li>
+            <li class="pipe__mine">fix in React/TypeScript</li>
+            <li class="pipe__mine">unit test</li>
+            <li class="pipe__mine">code review</li>
+            <li class="pipe__out">CI, against 4,000+ automated tests</li>
+          </ol>
+          <p class="project__body">
+            One example: a form-state bug in a branch-operations web app. I fixed it, updated the unit test to cover the new behaviour and took the change through code review. Internal details stay inside the bank.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- KARAR AKIŞI: Next Call'a yakından bakış (sabitlenen sahne) -->
     <section class="how" id="how" aria-labelledby="how-title">
       <div class="how__sticky">
         <div class="how__head">
-          <p class="eyebrow">Inside Next Call</p>
+          <p class="eyebrow">A closer look · Next Call</p>
           <h2 id="how-title">How one weekly call gets made</h2>
         </div>
         <ol class="how__steps">
@@ -94,77 +258,24 @@
       </div>
     </section>
 
-    <!-- İŞLER -->
-    <section class="work" id="work" aria-labelledby="work-title">
-      <p class="eyebrow">Work</p>
-      <h2 id="work-title" class="visually-hidden">Work</h2>
-
-      <article class="project project--flagship reveal">
-        <header class="project__head">
-          <img class="project__icon" src="/img/nc-icon.webp" alt="" width="56" height="56">
-          <div>
-            <h3>Next Call</h3>
-            <p class="project__tag">Solo · iOS · 2026</p>
-          </div>
-          <span class="pill pill--live">On the App Store since Nov 2026</span>
-        </header>
-        <p class="project__lede">
-          A weekly coaching app for lifting and diet. It looks at your training, food, weight and photos, and once a week it makes one call on what to change.
-        </p>
-        <div class="shots" role="list">
-          <figure role="listitem"><img src="/img/nc-01-this-week.webp" alt="Next Call: this week screen" loading="lazy" width="360" height="784"></figure>
-          <figure role="listitem"><img src="/img/nc-02-the-call.webp" alt="Next Call: the weekly call, new calorie target" loading="lazy" width="360" height="784"></figure>
-          <figure role="listitem"><img src="/img/nc-03-workout.webp" alt="Next Call: workout screen" loading="lazy" width="360" height="784"></figure>
-        </div>
-        <div class="project__cols">
-          <div>
-            <h4>How it's built</h4>
-            <p>Java and Spring Boot on the backend, split into modules with Spring Modulith. The React Native client is generated from an OpenAPI contract, so the app and the server work from the same definition. It runs in Docker on a VPS I set up and maintain.</p>
-          </div>
-          <div>
-            <h4>Decisions I'd defend</h4>
-            <ul class="decisions">
-              <li><b>Rules decide, the model explains.</b> A coaching number should be reproducible and testable. Wording is where a language model helps.</li>
-              <li><b>Modules, not services.</b> One person, one deploy. Clear seams if it ever has to be split.</li>
-              <li><b>Contract first.</b> The API is written as an OpenAPI spec before the code, and the mobile client is generated from it.</li>
-            </ul>
-          </div>
-        </div>
-        <p class="project__honest"><span>What's missing:</span> real users. That's the next step, not a footnote.</p>
-      </article>
-
-      <article class="project reveal">
-        <header class="project__head">
-          <div>
-            <h3>NutriScan</h3>
-            <p class="project__tag">Senior design project · team of 3 · 2026–2027</p>
-          </div>
-        </header>
-        <p class="project__lede">
-          Reads a packaged food's label from a photo and checks it against sourced rules for the user's health conditions. When the rules or the data don't cover a case, it says so instead of guessing.
-        </p>
-        <p class="project__body">
-          My part is the architecture and the Python label pipeline: text cleanup, ingredient matching (E-codes, Turkish plural forms, fuzzy matching) and rule evaluation from a versioned rule table. Submitted to TÜBİTAK 2209-A.
-        </p>
-      </article>
-
-      <div class="principles reveal">
-        <h3>How I work</h3>
-        <div class="principles__grid">
-          <div>
-            <h4>Write the decision down first</h4>
-            <p>Before a non-trivial change I write a short decision record: the options, the one I picked and why.</p>
-          </div>
-          <div>
-            <h4>Agents type, I keep the judgment</h4>
-            <p>I build with AI coding agents every day. My own attention goes to boundaries, contracts, tests and reading what got written.</p>
-          </div>
-          <div>
-            <h4>Boring and testable wins</h4>
-            <p>If a behaviour can't be tested, I don't trust it yet. That's the whole reason the coaching logic is rules and not a prompt.</p>
-          </div>
-        </div>
-      </div>
+    <!-- NASIL ÇALIŞIRIM -->
+    <section class="principles" id="principles" aria-labelledby="principles-title">
+      <p class="eyebrow">How I work</p>
+      <h2 id="principles-title" class="section-title">Fast with agents, slow on decisions</h2>
+      <ol class="principles__list">
+        <li class="reveal">
+          <h3>Inside a team's process</h3>
+          <p>At Garanti BBVA a change means a ticket, a test that covers it and a code review. I'm used to working to someone else's priorities and explaining my change to a reviewer.</p>
+        </li>
+        <li class="reveal">
+          <h3>Agents type, I keep the judgment</h3>
+          <p>I build with AI coding agents every day. My own attention goes to boundaries, contracts, tests and reading what got written.</p>
+        </li>
+        <li class="reveal">
+          <h3>Write the decision down first</h3>
+          <p>Before a non-trivial change I write a short decision record: the options, the one I picked and why. If a behaviour can't be tested, I don't trust it yet.</p>
+        </li>
+      </ol>
     </section>
 
     <!-- DENEYİM -->
@@ -173,11 +284,11 @@
       <h2 id="exp-title" class="visually-hidden">Experience</h2>
       <ol class="timeline">
         <li class="reveal">
-          <span class="timeline__when">Jul – Nov 2026</span>
+          <span class="timeline__when">Jul–Nov 2026</span>
           <div>
-            <h3>Garanti BBVA Technology</h3>
-            <p class="timeline__role">Long-term software engineering intern · Branch Channel Management</p>
-            <p>Bug fixes in a React/TypeScript web app, unit tests and code review, in an Agile team working on a large banking codebase.</p>
+            <h3>Garanti BBVA Teknoloji</h3>
+            <p class="timeline__role">Long-term software engineering intern · Branch Channel Management · remote</p>
+            <p>Bug fixes in a React/TypeScript web app, unit tests and code review, in an Agile team on a large banking codebase.</p>
           </div>
         </li>
         <li class="reveal">
@@ -189,7 +300,7 @@
           </div>
         </li>
         <li class="reveal">
-          <span class="timeline__when">Jun – Jul 2026</span>
+          <span class="timeline__when">Jun–Jul 2026</span>
           <div>
             <h3>Karadeniz Holding</h3>
             <p class="timeline__role">Software engineering intern</p>
@@ -197,7 +308,7 @@
           </div>
         </li>
         <li class="reveal">
-          <span class="timeline__when">Apr – Jun 2026</span>
+          <span class="timeline__when">Apr–Jun 2026</span>
           <div>
             <h3>Akdeniz University IT Department</h3>
             <p class="timeline__role">IT support assistant · part-time</p>
@@ -212,7 +323,7 @@
           </div>
         </li>
         <li class="reveal">
-          <span class="timeline__when">2022 – 2027</span>
+          <span class="timeline__when">2022–2027</span>
           <div>
             <h3>Akdeniz University</h3>
             <p class="timeline__role">B.Sc. Computer Engineering · graduating June 2027</p>
@@ -223,8 +334,8 @@
 
     <!-- İLETİŞİM -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Looking for new-grad software roles from summer 2027.</h2>
-      <p>If you're building something where getting the decision right matters, I'd like to hear about it.</p>
+      <h2 id="contact-title">Looking for a new-grad software engineering role from summer 2027.</h2>
+      <p>I'd like a team where I work across the stack and learn from people who've run real systems for years.</p>
       <ul class="contact__links">
         <li><a href="mailto:ceylanleventcan@gmail.com">ceylanleventcan@gmail.com</a></li>
         <li><a href="https://github.com/leventtcaan" target="_blank" rel="noopener">GitHub ↗</a></li>
