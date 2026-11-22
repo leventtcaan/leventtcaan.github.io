@@ -3,219 +3,242 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Levent Can Ceylan — Backend & Agentic Systems</title>
-  <meta name="description" content="Computer Engineering senior building dependable Java backend systems and reliable, tool-using AI workflows.">
-  <meta name="author" content="Levent Can Ceylan">
-  <meta name="theme-color" content="#f2f0e9">
-  <meta property="og:title" content="Levent Can Ceylan — Backend & Agentic Systems">
-  <meta property="og:description" content="Building software systems that can act, recover and explain themselves.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://leventtcaan.github.io/">
+  <title>Levent Can Ceylan · Software engineer</title>
+  <meta name="description" content="Software engineer graduating June 2027. I built Next Call, an iOS coaching app on the App Store: the rules make the decisions, the AI only explains them.">
+  <meta property="og:title" content="Levent Can Ceylan · Software engineer">
+  <meta property="og:description" content="I built Next Call, an iOS coaching app on the App Store. The rules make the decisions; the AI only explains them.">
   <meta property="og:image" content="https://leventtcaan.github.io/assets/og-card.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Levent Can Ceylan — Backend & Agentic Systems">
-  <meta name="twitter:description" content="Building software systems that can act, recover and explain themselves.">
-  <meta name="twitter:image" content="https://leventtcaan.github.io/assets/og-card.png">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <script>document.documentElement.classList.add('js');</script>
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0B0D12">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <canvas id="webgl" aria-hidden="true"></canvas>
 
-  <header class="topbar" id="topbar">
-    <a class="wordmark" href="#home" aria-label="Levent Can Ceylan, home">
-      <span class="wordmark-mark" aria-hidden="true">LC</span>
-      <span>Levent Can Ceylan</span>
-    </a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#direction">Direction</a>
+  <header class="nav">
+    <a class="nav__name" href="#top">Levent Can Ceylan</a>
+    <nav aria-label="Sections">
+      <a href="#how">How it decides</a>
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#now">Now</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="mailto:ceylanleventcan@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
   </header>
 
-  <main id="main" tabindex="-1">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-copy reveal is-visible">
-        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> Final-year computer engineering student</div>
-        <h1 id="hero-title">Systems that can <em>act, recover</em> and explain themselves.</h1>
-        <p class="hero-lede">
-          I’m Levent — a backend-focused software engineer in progress. At Garanti BBVA Technology, I work as a
-          <strong>long-term software engineering intern</strong>; beyond the internship, I’m developing toward
-          <strong>distributed systems</strong> and <strong>reliable agentic AI</strong>.
+  <main id="main">
+    <!-- HERO: kanıt ilk ekranda -->
+    <section class="hero" id="top">
+      <div class="hero__text">
+        <p class="eyebrow">Software engineer · graduating June 2027</p>
+        <h1 class="hero__name">Levent Can<br>Ceylan</h1>
+        <p class="hero__lede">
+          I built <strong>Next Call</strong>, an iOS coaching app that's now on the App Store.
+          The rules make the decisions; the AI only explains them.
         </p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#experience">See my trajectory <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="https://github.com/leventtcaan" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="https://www.linkedin.com/in/leventcanceylan/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://apps.apple.com/app/id6819852276" target="_blank" rel="noopener">See it on the App Store <span aria-hidden="true">↗</span></a>
+          <a class="btn btn--ghost" href="#how">How it decides <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="hero-facts" aria-label="Profile facts">
-          <div><span>Education</span><strong>Akdeniz University</strong></div>
-          <div><span>Currently</span><strong>Software Engineering Intern</strong></div>
-          <div><span>Next</span><strong>New-grad software roles</strong></div>
-        </div>
+        <p class="hero__meta">
+          Akdeniz University, Computer Engineering · Software engineering intern at Garanti BBVA Technology · Antalya, Türkiye
+        </p>
       </div>
+      <!-- WebGL yoksa ya da hareket azaltılmışsa görünen yedek telefon -->
+      <figure class="hero__phone-fallback" aria-hidden="true">
+        <div class="phone-frame"><img src="/img/nc-02-the-call.webp" alt="" width="360" height="784"></div>
+      </figure>
+    </section>
 
-      <div class="hero-visual reveal is-visible" aria-label="A visual map of Levent's engineering direction">
-        <div class="portrait-frame">
-          <img src="assets/levent-profile.jpg" width="460" height="460" alt="Portrait of Levent Can Ceylan" decoding="async" fetchpriority="high">
-          <span class="portrait-index">01 / ENGINEER IN PROGRESS</span>
+    <!-- KARAR AKIŞI: sabitlenen kaydırma sahnesi -->
+    <section class="how" id="how" aria-labelledby="how-title">
+      <div class="how__sticky">
+        <div class="how__head">
+          <p class="eyebrow">Inside Next Call</p>
+          <h2 id="how-title">How one weekly call gets made</h2>
         </div>
-        <div class="system-map" aria-hidden="true">
-          <span class="map-label map-label-top">CURRENT SYSTEM</span>
-          <div class="map-node node-core"><span>LEVENT</span><small>builder</small></div>
-          <div class="map-node node-java"><span>JAVA</span><small>backend</small></div>
-          <div class="map-node node-ai"><span>AGENTS</span><small>reliable</small></div>
-          <div class="map-node node-systems"><span>SYSTEMS</span><small>distributed</small></div>
-          <div class="map-line line-a"></div>
-          <div class="map-line line-b"></div>
-          <div class="map-line line-c"></div>
-          <span class="map-label map-label-bottom">LEARNING → BUILDING → MEASURING</span>
+        <ol class="how__steps">
+          <li class="step" data-step="0">
+            <span class="step__n">01</span>
+            <h3>It reads the week</h3>
+            <p>Weigh-ins, logged meals, finished workouts, progress photos. Nothing is decided yet.</p>
+          </li>
+          <li class="step" data-step="1">
+            <span class="step__n">02</span>
+            <h3>Rules look at the trend</h3>
+            <p>A deterministic engine checks the numbers against the goal. In this case: −0.3 kg a week for three weeks, not toward the goal.</p>
+          </li>
+          <li class="step" data-step="2">
+            <span class="step__n">03</span>
+            <h3>One decision comes out</h3>
+            <p>Calories go from 2,050 to 1,800. The same inputs always give the same answer, so the logic can be tested like any other code.</p>
+          </li>
+          <li class="step" data-step="3">
+            <span class="step__n">04</span>
+            <h3>The AI puts it into words</h3>
+            <p>A language model writes the explanation the user reads. It doesn't get to change the number.</p>
+          </li>
+        </ol>
+        <div class="how__labels" aria-hidden="true">
+          <span class="flow-label" data-label="in-0">weigh-ins</span>
+          <span class="flow-label" data-label="in-1">meals</span>
+          <span class="flow-label" data-label="in-2">workouts</span>
+          <span class="flow-label" data-label="in-3">photos</span>
+          <span class="flow-label flow-label--engine" data-label="engine">rule engine</span>
+          <span class="flow-label flow-label--decision" data-label="decision">2,050 → 1,800 kcal</span>
+          <span class="flow-label flow-label--ai" data-label="ai">“You've lost 0.3 kg a week for three weeks. One step: 250 kcal a day less.”</span>
         </div>
       </div>
     </section>
 
-    <div class="ticker" aria-label="Areas of focus">
-      <div class="ticker-track">
-        <span>JAVA / SPRING</span><i aria-hidden="true">◆</i><span>DISTRIBUTED SYSTEMS</span><i aria-hidden="true">◆</i><span>AGENTIC AI</span><i aria-hidden="true">◆</i><span>REACT / TYPESCRIPT</span><i aria-hidden="true">◆</i>
-        <span aria-hidden="true">JAVA / SPRING</span><i aria-hidden="true">◆</i><span aria-hidden="true">DISTRIBUTED SYSTEMS</span><i aria-hidden="true">◆</i><span aria-hidden="true">AGENTIC AI</span><i aria-hidden="true">◆</i><span aria-hidden="true">REACT / TYPESCRIPT</span><i aria-hidden="true">◆</i>
-      </div>
-    </div>
+    <!-- İŞLER -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <p class="eyebrow">Work</p>
+      <h2 id="work-title" class="visually-hidden">Work</h2>
 
-    <section class="section direction" id="direction" aria-labelledby="direction-title">
-      <div class="section-heading reveal">
-        <p class="section-kicker">01 — Engineering direction</p>
-        <h2 id="direction-title">Not a stack collector.<br>A systems thinker in training.</h2>
-        <p>I’m building depth in one connected direction: dependable backends, AI workflows that earn autonomy, and product surfaces that make complex behavior understandable.</p>
-      </div>
-
-      <div class="direction-grid">
-        <article class="direction-card direction-card-primary reveal">
-          <p class="card-number">01</p>
+      <article class="project project--flagship reveal">
+        <header class="project__head">
+          <img class="project__icon" src="/img/nc-icon.webp" alt="" width="56" height="56">
           <div>
-            <p class="card-status">CORE / DEEPENING</p>
-            <h3>Backend systems</h3>
-            <p>Java, Spring, PostgreSQL, concurrency, event-driven design, testing and observability.</p>
+            <h3>Next Call</h3>
+            <p class="project__tag">Solo · iOS · 2026</p>
           </div>
-          <p class="card-principle">Make the system correct before making it clever.</p>
-        </article>
-
-        <article class="direction-card reveal">
-          <p class="card-number">02</p>
+          <span class="pill pill--live">On the App Store since Nov 2026</span>
+        </header>
+        <p class="project__lede">
+          A weekly coaching app for lifting and diet. It looks at your training, food, weight and photos, and once a week it makes one call on what to change.
+        </p>
+        <div class="shots" role="list">
+          <figure role="listitem"><img src="/img/nc-01-this-week.webp" alt="Next Call: this week screen" loading="lazy" width="360" height="784"></figure>
+          <figure role="listitem"><img src="/img/nc-02-the-call.webp" alt="Next Call: the weekly call, new calorie target" loading="lazy" width="360" height="784"></figure>
+          <figure role="listitem"><img src="/img/nc-03-workout.webp" alt="Next Call: workout screen" loading="lazy" width="360" height="784"></figure>
+        </div>
+        <div class="project__cols">
           <div>
-            <p class="card-status">EDGE / EXPLORING</p>
-            <h3>Reliable agents</h3>
-            <p>Tool use, durable workflows, evals, human approval, security and failure recovery.</p>
+            <h4>How it's built</h4>
+            <p>Java and Spring Boot on the backend, split into modules with Spring Modulith. The React Native client is generated from an OpenAPI contract, so the app and the server work from the same definition. It runs in Docker on a VPS I set up and maintain.</p>
           </div>
-          <p class="card-principle">Autonomy is useful only when it is measurable.</p>
-        </article>
-
-        <article class="direction-card reveal">
-          <p class="card-number">03</p>
           <div>
-            <p class="card-status">SURFACE / BUILDING</p>
-            <h3>Product clarity</h3>
-            <p>React and TypeScript interfaces that turn system state, decisions and traces into a product people can use.</p>
+            <h4>Decisions I'd defend</h4>
+            <ul class="decisions">
+              <li><b>Rules decide, the model explains.</b> A coaching number should be reproducible and testable. Wording is where a language model helps.</li>
+              <li><b>Modules, not services.</b> One person, one deploy. Clear seams if it ever has to be split.</li>
+              <li><b>Contract first.</b> The API is written as an OpenAPI spec before the code, and the mobile client is generated from it.</li>
+            </ul>
           </div>
-          <p class="card-principle">If users cannot understand it, it is not finished.</p>
-        </article>
+        </div>
+        <p class="project__honest"><span>What's missing:</span> real users. That's the next step, not a footnote.</p>
+      </article>
+
+      <article class="project reveal">
+        <header class="project__head">
+          <div>
+            <h3>NutriScan</h3>
+            <p class="project__tag">Senior design project · team of 3 · 2026–2027</p>
+          </div>
+        </header>
+        <p class="project__lede">
+          Reads a packaged food's label from a photo and checks it against sourced rules for the user's health conditions. When the rules or the data don't cover a case, it says so instead of guessing.
+        </p>
+        <p class="project__body">
+          My part is the architecture and the Python label pipeline: text cleanup, ingredient matching (E-codes, Turkish plural forms, fuzzy matching) and rule evaluation from a versioned rule table. Submitted to TÜBİTAK 2209-A.
+        </p>
+      </article>
+
+      <div class="principles reveal">
+        <h3>How I work</h3>
+        <div class="principles__grid">
+          <div>
+            <h4>Write the decision down first</h4>
+            <p>Before a non-trivial change I write a short decision record: the options, the one I picked and why.</p>
+          </div>
+          <div>
+            <h4>Agents type, I keep the judgment</h4>
+            <p>I build with AI coding agents every day. My own attention goes to boundaries, contracts, tests and reading what got written.</p>
+          </div>
+          <div>
+            <h4>Boring and testable wins</h4>
+            <p>If a behaviour can't be tested, I don't trust it yet. That's the whole reason the coaching logic is rules and not a prompt.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section experience" id="experience" aria-labelledby="experience-title">
-      <div class="experience-intro reveal">
-        <p class="section-kicker">02 — Experience trajectory</p>
-        <h2 id="experience-title">Learning how large organizations change software.</h2>
-        <p>Three internships gave me views into industrial operations, banking and technology delivery. I’m now turning those observations into engineering depth.</p>
-      </div>
-
+    <!-- DENEYİM -->
+    <section class="experience" id="experience" aria-labelledby="exp-title">
+      <p class="eyebrow">Experience</p>
+      <h2 id="exp-title" class="visually-hidden">Experience</h2>
       <ol class="timeline">
-        <li class="timeline-item reveal">
-          <div class="timeline-marker"><span>NOW</span></div>
-          <div class="timeline-content">
-            <p class="timeline-meta">Software Engineering Intern · Current</p>
+        <li class="reveal">
+          <span class="timeline__when">Jul – Nov 2026</span>
+          <div>
             <h3>Garanti BBVA Technology</h3>
-            <p>Branch Channel Management team. Bug fixes in a React/TypeScript web app, unit tests and code review, in an Agile team on a large banking codebase.</p>
-            <ul class="timeline-tags"><li>React</li><li>TypeScript</li><li>Fintech</li></ul>
+            <p class="timeline__role">Long-term software engineering intern · Branch Channel Management</p>
+            <p>Bug fixes in a React/TypeScript web app, unit tests and code review, in an Agile team working on a large banking codebase.</p>
           </div>
         </li>
-        <li class="timeline-item reveal">
-          <div class="timeline-marker"><span>02</span></div>
-          <div class="timeline-content">
-            <p class="timeline-meta">Head Office Internship · 2 weeks</p>
+        <li class="reveal">
+          <span class="timeline__when">2026</span>
+          <div>
             <h3>Garanti BBVA</h3>
-            <p>A two-week view into how a major bank’s head-office functions coordinate people, processes and technology.</p>
-            <ul class="timeline-tags"><li>Banking</li><li>Enterprise</li></ul>
+            <p class="timeline__role">Head office internship · 2 weeks</p>
+            <p>A short look at how a large bank's head-office teams work with technology.</p>
           </div>
         </li>
-        <li class="timeline-item reveal">
-          <div class="timeline-marker"><span>01</span></div>
-          <div class="timeline-content">
-            <p class="timeline-meta">Mandatory Internship · 1 month</p>
+        <li class="reveal">
+          <span class="timeline__when">Jun – Jul 2026</span>
+          <div>
             <h3>Karadeniz Holding</h3>
-            <p>My first professional engineering environment and an introduction to technology within large-scale industrial operations.</p>
-            <ul class="timeline-tags"><li>Industry</li><li>Operations</li></ul>
+            <p class="timeline__role">Software engineering intern</p>
+            <p>Worked with the technology team on internal operations and documented technical workflows.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="timeline__when">Apr – Jun 2026</span>
+          <div>
+            <h3>Akdeniz University IT Department</h3>
+            <p class="timeline__role">IT support assistant · part-time</p>
+            <p>Hardware and software support for the university's IT services.</p>
+          </div>
+        </li>
+        <li class="reveal timeline__programs">
+          <span class="timeline__when">2026–2027</span>
+          <div>
+            <h3>Programs</h3>
+            <p>Türkiye Siber Vatan 2027 (cybersecurity with AI) · Garanti BBVA Kariyerime İlk Adım</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="timeline__when">2022 – 2027</span>
+          <div>
+            <h3>Akdeniz University</h3>
+            <p class="timeline__role">B.Sc. Computer Engineering · graduating June 2027</p>
           </div>
         </li>
       </ol>
     </section>
 
-    <section class="section now" id="now" aria-labelledby="now-title">
-      <div class="now-header reveal">
-        <p class="section-kicker">03 — Now / next</p>
-        <h2 id="now-title">Building the foundation before making the claim.</h2>
-      </div>
-
-      <div class="now-board reveal">
-        <article>
-          <span class="now-code">STUDY</span>
-          <h3>Systems fundamentals</h3>
-          <p>Java internals, databases, networking, operating systems, algorithms and distributed-system failure modes.</p>
-        </article>
-        <article>
-          <span class="now-code">BUILD</span>
-          <h3>One defensible flagship</h3>
-          <p>I’m researching a real problem worth solving — then I’ll publish the product, architecture decisions, evals and failure analysis.</p>
-        </article>
-        <article>
-          <span class="now-code">PRACTICE</span>
-          <h3>Engineering judgment</h3>
-          <p>Choosing simple designs first, measuring trade-offs and learning to explain every important line and decision.</p>
-        </article>
-      </div>
-
-      <div class="manifesto reveal">
-        <p class="manifesto-label">A working principle</p>
-        <blockquote>“The goal is not to add AI to software. It is to build software that deserves the responsibility we give it.”</blockquote>
-      </div>
-    </section>
-
+    <!-- İLETİŞİM -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact-copy reveal">
-        <p class="section-kicker">04 — Contact</p>
-        <h2 id="contact-title">Let’s talk about hard problems, not buzzwords.</h2>
-        <p>I’m interested in new-grad software engineering opportunities, especially teams working on backend platforms, modernization and dependable AI-enabled products.</p>
-      </div>
-      <div class="contact-links reveal">
-        <a href="mailto:ceylanleventcan@gmail.com"><span>Email</span><strong>ceylanleventcan@gmail.com</strong><i aria-hidden="true">↗</i></a>
-        <a href="https://github.com/leventtcaan" target="_blank" rel="noopener noreferrer"><span>Code</span><strong>github.com/leventtcaan</strong><i aria-hidden="true">↗</i></a>
-        <a href="https://www.linkedin.com/in/leventcanceylan/" target="_blank" rel="noopener noreferrer"><span>Profile</span><strong>LinkedIn</strong><i aria-hidden="true">↗</i></a>
-      </div>
+      <h2 id="contact-title">Looking for new-grad software roles from summer 2027.</h2>
+      <p>If you're building something where getting the decision right matters, I'd like to hear about it.</p>
+      <ul class="contact__links">
+        <li><a href="mailto:ceylanleventcan@gmail.com">ceylanleventcan@gmail.com</a></li>
+        <li><a href="https://github.com/leventtcaan" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/leventcanceylan" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="https://apps.apple.com/app/id6819852276" target="_blank" rel="noopener">Next Call ↗</a></li>
+      </ul>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Levent Can Ceylan <span>© 2026</span></p>
-    <p>Built with intent. No invented metrics, no skill bars.</p>
-    <a href="#home">Back to top ↑</a>
+    <span>© 2026 Levent Can Ceylan</span>
+    <a href="#top">Back to top ↑</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
